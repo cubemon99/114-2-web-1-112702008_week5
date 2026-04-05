@@ -1,10 +1,17 @@
-import Image from "next/image";
+"use client"
+ 
+ import Image from "next/image"
+  import Link from "next/link";
+
+  import Folder from '@/components/Folder'
 
 export default function Home() {
   return (
-     <div>
-      <div>左邊</div>
-      <div>右邊</div>
-     </div>
+    <>
+      首頁
+      <div style={{ height: '600px', position: 'relative' }}>
+  <Folder size={2} color="#5227FF" className="custom-folder"/>
+      </div>
+    </>
   );
 }
