@@ -4,7 +4,11 @@
 export default function Home() {
   return (
     <>
-      about 關於我
+      <div className="bg-[url('/background_about.jpg')] h-screen p-4">
+       about 關於我
+    
+      </div>
+      
     </>
   );
 }

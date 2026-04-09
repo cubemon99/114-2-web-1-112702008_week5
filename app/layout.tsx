@@ -42,24 +42,48 @@ export default function RootLayout({
 
         {/* 左邊 */}
 
-        <div className="bg-white w-[320px] h-full p-4">
+        <div className="bg-[url('/background.jpg')] h-screen p-4">
+
+       
 
           <div className="bg-gray-200 w-[80px] h-[80px] rounded-full overflow-hidden flex justify-center items-center m-auto">
-            <Image src="/me.jpg" alt="me" width={80} height={80}/>  
+            <Image src="/icons/me.jpg" alt="me" width={80} height={80}/>  
 
 
 
           </div>
-          <div className="text-center">姓名</div>
-          <div className="text-center">介紹</div>
+          <div className="text-center">
+          <p className="custom-text text-slate-700">鄧柏希</p>
+          </div>
+          <div className="text-center">
+           <p className="custom-text text-slate-700">心理學,科技,影音領域反複橫跳的人類</p>
+          </div>
 
           <div className="flex gap-2">
             {/* icons, links, images */}
-            <div className="bg-amber-300 p-[16px]">
-              <TbActivity />
+
+
+             {/*  lindedin圖案連結  */}
+            <div className="bg-white-100 w-[50px] h-[50px]  rounded-2xl overflow-hidden flex justify-center items-center m-auto">
+             <Link href="www.linkedin.com/in/cube-mo-227096393" target="_blank">
+               <Image src="/icons/linkedin.png" alt="linkedin" width={80} height={80}/>
+              </Link>
             </div>
-            <div className="bg-amber-300 p-[16px]">社群連結</div>
-            <div className="bg-amber-300 p-[16px]">社群連結</div>
+
+            {/*  ig圖案連結  */}
+            <div className="bg-white-100 w-[50px] h-[50px]  rounded-2xl overflow-hidden flex justify-center items-center m-auto">
+             <Link href="https://www.instagram.com/cube_mo?igsh=djFjY2p6NHkwcDV2&utm_source=qr" target="_blank">
+               <Image src="/icons/instagram.jpg" alt="instagram" width={80} height={80}/>
+              </Link>
+            </div>
+
+            {/*  fb圖案連結  */}
+            <div className="bg-white-100 w-[50px] h-[50px] rounded-2x1 overflow-hidden flex justify-center items-center m-auto">
+             <Link href="https://www.facebook.com/share/1Dhaktvpjw/?mibextid=LQQJ4d" target="_blank">
+               <Image src="/icons/facebook.webp" alt="facebook" width={80} height={80}/>
+             </Link>
+            </div>
+
           </div>
 
         
