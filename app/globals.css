@@ -2,14 +2,10 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-@font-face {
-  font-family: 'Tanugo_Font';
-  src: url('/fonts/Tanugo-TTF-Regular.ttf') format('truetype');
-}
 
-  .Tanugo-font {
-    font-family: 'Tanugo_Font';
-  }
+.Tanugo-font {
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
 
 @custom-variant dark (&:is(.dark *));
 
