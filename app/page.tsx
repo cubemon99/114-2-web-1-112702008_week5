@@ -1,45 +1,25 @@
-
- 
- import Image from "next/image"
-  import Link from "next/link";
-
-
+import Image from "next/image";
 
 export default function Home() {
-
-
-
-
-  
   return (
     <>
-
-    
-
-    <div className="bg-white h-[90%] w-full rounded-2xl p-3 bg-cover">
-      
-     
-        <div className={`bg-amber-50 rounded-2xl h-full flex justify-center 
-        items-end     
-          pb-10
-          row-span-2 
-          bg-[url(/background.jpg)] bg-center bg-cover`}>
-
-
-            <div className="text-white bg-black/15 w-full h-[80px] flex
-              justify-center items-center backdrop-blur-sm
-              ">
-                這裏沒東西賣
-            </div>
+      <div className="h-[90%] w-full rounded-2xl bg-white p-3">
+        <div className="relative flex h-full flex-col justify-end overflow-hidden rounded-2xl pb-10">
+          <Image
+            src="/me4.jpg"
+            alt=""
+            fill
+            className="object-cover object-center"
+            sizes="(max-width: 768px) 100vw, 100vw"
+            priority
+          />
+          <div
+            className="relative z-10 flex h-[80px] w-full items-center justify-center bg-black/15 text-white backdrop-blur-sm"
+          >
+            這裏沒東西賣
+          </div>
         </div>
-
-       
-
-       
-       
       </div>
-      
-      
     </>
   );
 }
