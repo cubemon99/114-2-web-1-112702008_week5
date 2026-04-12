@@ -78,7 +78,7 @@ flex flex-row flex-wrap items-center rounded-2xl
   {/* 右側：圖片區塊 (佔 40% 寬度) */}
   <div className="w-[300px] flex">
     <div className="rounded-3xl overflow-hidden shadow-lg border-4 border-white">
-        <img src="/icons/me.jpg" alt="me" className="w-full h-auto object-cover" />
+        <img src="/me2.jpg" alt="me2" className="w-full h-auto object-cover" />
     </div>
   </div>
 
@@ -87,7 +87,7 @@ flex flex-row flex-wrap items-center rounded-2xl
         {/* 右側：圖片區塊 (佔 40% 寬度) */}
         <div className="w-[300px] ml-10 flex">
           <div className="rounded-3xl overflow-hidden shadow-lg border-4 border-white">
-              <img src="/icons/me.jpg" alt="me" className="w-full h-auto object-cover" />
+              <img src="/me3.jpg" alt="me3" className="w-full h-auto object-cover" />
           </div>
         </div>
               
@@ -215,7 +215,7 @@ flex flex-row flex-wrap items-center rounded-2xl
       {/* 右側：圖片區塊 (佔 40% 寬度) */}
       <div className="w-[300px] ml-10 flex">
           <div className="rounded-3xl overflow-hidden shadow-lg border-4 border-white">
-              <img src="/icons/me.jpg" alt="me" className="w-full h-auto object-cover" />
+              <img src="/barjob.png" alt="barjob" className="w-full h-auto object-cover" />
           </div>
        </div>
 

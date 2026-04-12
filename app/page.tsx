@@ -16,7 +16,7 @@ export default function Home() {
 
     
 
-    <div className="bg-white h-full w-full rounded-2xl p-3">
+    <div className="bg-white h-[90%] w-full rounded-2xl p-3 bg-cover">
       
      
         <div className={`bg-amber-50 rounded-2xl h-full flex justify-center 

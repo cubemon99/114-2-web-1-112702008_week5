@@ -49,30 +49,18 @@ export default function RootLayout({
 
       <div className="flex h-full ">
 
-    <main className="flex min-h-screen w-full pb-20w-full 
-    overflow-hidden bg-[url('/background.jpg')] 
-     bg-cover  p-10  gap-6">
+    <main className="flex min-h-full w-full gap-6 overflow-hidden bg-[url('/background.jpg')] bg-cover p-10 pb-20">
       
 
         {/* 左邊 */}
       
 
-        <div className="
-        
-        h-[90%]
-        bg-[url('/background_about.jpg')] 
-        bg-cover bg-center bg-no-repeat
-        bg-fixed
-        rounded-2xl
-        p-4">
+        <div
+          className="h-[90%] rounded-2xl bg-[url('/background_about.jpg')] bg-cover bg-center bg-no-repeat bg-fixed p-4 shadow-lg shadow-slate-900/10 transition-[box-shadow,transform] duration-300 ease-out hover:shadow-xl hover:shadow-slate-900/15 motion-reduce:transition-none motion-reduce:hover:shadow-lg"
+        >
 
-       
-
-          <div className="bg-gray-200 w-[80px] h-[80px] rounded-full overflow-hidden flex justify-center items-center m-auto">
-            <Image src="/icons/me.jpg" alt="me" width={80} height={80}/>  
-
-
-
+          <div className="m-auto flex h-[80px] w-[80px] items-center justify-center overflow-hidden rounded-full bg-gray-200 shadow-md ring-2 ring-white/50 transition-all duration-300 ease-out hover:scale-105 hover:shadow-lg hover:ring-white/80 motion-reduce:hover:scale-100">
+            <Image src="/icons/me.jpg" alt="me" width={80} height={80} />
           </div>
 
            <div className="text-center">
@@ -83,61 +71,76 @@ export default function RootLayout({
               <p className="Tanugo-font text-slate-700">心理學,科技,影音領域反複橫跳的人類</p>
            </div>
 
-          <div className="flex gap-2">
-            {/* icons, links, images */}
+          <div className="m-auto flex max-w-[200px] justify-center gap-2">
+            <Link
+              href="https://www.linkedin.com/in/cube-mo-227096393"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-[50px] w-[50px] items-center justify-center overflow-hidden rounded-2xl bg-white/90 shadow-sm ring-1 ring-slate-200/80 transition-all duration-200 ease-out hover:scale-110 hover:shadow-md hover:ring-blue-200 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 motion-reduce:hover:scale-100"
+            >
+              <Image src="/icons/linkedin.png" alt="LinkedIn" width={80} height={80} />
+            </Link>
 
+            <Link
+              href="https://www.instagram.com/cube_mo?igsh=djFjY2p6NHkwcDV2&utm_source=qr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-[50px] w-[50px] items-center justify-center overflow-hidden rounded-2xl bg-white/90 shadow-sm ring-1 ring-slate-200/80 transition-all duration-200 ease-out hover:scale-110 hover:shadow-md hover:ring-pink-200 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink-500 focus-visible:ring-offset-2 motion-reduce:hover:scale-100"
+            >
+              <Image src="/icons/instagram.jpg" alt="Instagram" width={80} height={80} />
+            </Link>
 
-             {/*  lindedin圖案連結  */}
-            <div className="bg-white-100 w-[50px] h-[50px]  rounded-2xl overflow-hidden flex justify-center items-center m-auto">
-             <Link href="https://www.linkedin.com/in/cube-mo-227096393" target="_blank">
-              
-                  
-                 <Image src="/icons/linkedin.png" alt="linkedin" width={80} height={80}/>
-               
-              </Link>
-            </div>
-
-            {/*  ig圖案連結  */}
-            <div className="bg-white-100 w-[50px] h-[50px]  rounded-2xl overflow-hidden flex justify-center items-center m-auto">
-             <Link href="https://www.instagram.com/cube_mo?igsh=djFjY2p6NHkwcDV2&utm_source=qr" target="_blank">
-               <Image src="/icons/instagram.jpg" alt="instagram" width={80} height={80}/>
-              </Link>
-            </div>
-
-            {/*  fb圖案連結  */}
-            <div className="bg-white-100 w-[50px] h-[50px] rounded-2x1 overflow-hidden flex justify-center items-center m-auto">
-             <Link href="https://www.facebook.com/share/1Dhaktvpjw/?mibextid=LQQJ4d" target="_blank">
-               <Image src="/icons/facebook.webp" alt="facebook" width={80} height={80}/>
-             </Link>
-            </div>
-
+            <Link
+              href="https://www.facebook.com/share/1Dhaktvpjw/?mibextid=LQQJ4d"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-[50px] w-[50px] items-center justify-center overflow-hidden rounded-2xl bg-white/90 shadow-sm ring-1 ring-slate-200/80 transition-all duration-200 ease-out hover:scale-110 hover:shadow-md hover:ring-blue-300 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 motion-reduce:hover:scale-100"
+            >
+              <Image src="/icons/facebook.webp" alt="Facebook" width={80} height={80} />
+            </Link>
           </div>
 
         
 
-          
-          <Link href="/about">
-            <div className="bg-blue-200 p-[16px] mt-2 rounded-md">關於我 </div>
-          </Link>
-
-          <Link href="/hobby">
-            <div className="bg-blue-200 p-[16px] mt-2 rounded-md">我的興趣 </div>
-          </Link>
-          <Link href="/portfolio">
-            <div className="bg-blue-200 p-[16px] mt-2 rounded-md">作品集 </div>
-          </Link>
-          <Link href="/project">
-           <div className="bg-blue-200 p-[16px] mt-2 rounded-md">課程專案 </div>
-          </Link>
+          <nav className="mt-3 flex flex-col gap-2" aria-label="主要導覽">
+            <Link
+              href="/about"
+              className="block rounded-lg bg-blue-200 px-4 py-3 text-center text-slate-800 shadow-sm transition-all duration-200 ease-out hover:translate-x-1 hover:bg-blue-300 hover:shadow-md active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 focus-visible:ring-offset-2 motion-reduce:hover:translate-x-0"
+            >
+              關於我
+            </Link>
+            <Link
+              href="/hobby"
+              className="block rounded-lg bg-blue-200 px-4 py-3 text-center text-slate-800 shadow-sm transition-all duration-200 ease-out hover:translate-x-1 hover:bg-blue-300 hover:shadow-md active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 focus-visible:ring-offset-2 motion-reduce:hover:translate-x-0"
+            >
+              我的興趣
+            </Link>
+            <Link
+              href="/portfolio"
+              className="block rounded-lg bg-blue-200 px-4 py-3 text-center text-slate-800 shadow-sm transition-all duration-200 ease-out hover:translate-x-1 hover:bg-blue-300 hover:shadow-md active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 focus-visible:ring-offset-2 motion-reduce:hover:translate-x-0"
+            >
+              作品集
+            </Link>
+            <Link
+              href="/project"
+              className="block rounded-lg bg-blue-200 px-4 py-3 text-center text-slate-800 shadow-sm transition-all duration-200 ease-out hover:translate-x-1 hover:bg-blue-300 hover:shadow-md active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 focus-visible:ring-offset-2 motion-reduce:hover:translate-x-0"
+            >
+              課程專案
+            </Link>
+          </nav>
 
         </div>
 
 
-        <Link href="/" className="fixed bottom-10 right-10 z-50">
-          <div className="bg-white p-4 rounded-full shadow-lg border border-gray-200 hover:scale-110 transition-transform cursor-pointer">
-            home{/* 這裡可以放一個家的圖示，或簡單寫個 Home */}
-            <span className="text-blue-900 font-bold">🏠</span>
-          </div>
+        <Link
+          href="/"
+          className="fixed bottom-10 right-10 z-50 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+          aria-label="回到首頁"
+        >
+          <span className="flex cursor-pointer items-center gap-1 rounded-full border border-gray-200 bg-white px-4 py-3 text-sm text-blue-900 shadow-lg transition-all duration-200 ease-out hover:scale-110 hover:shadow-xl hover:shadow-slate-900/15 active:scale-95 motion-reduce:hover:scale-100">
+            <span className="font-bold">🏠</span>
+            <span className="font-medium">首頁</span>
+          </span>
         </Link>
 
         <div className="bg-transparent w-full rounded-2xl h-screen">
