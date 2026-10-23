@@ -67,54 +67,25 @@ const projects: readonly Project[] = [
   description: "用簡單幽默方式介紹組織心理學",
   tags: ["輕快劇場", "短影音剪輯"],
 },
-  {
-    type: "image",
-    src: "/project/NightMartet.jpg",
-    alt: "無人夜市預覽",
-    href: "https://1142-final-project-the-liminal-market.vercel.app/",
-    category: "遊戲專案",
-    title: "無人夜市",
-    description:
-      "雙時空背景、心理恐怖、核心機制（夜市小遊戲）與敘事核心，適合做為作品集的亮點摘要。",
-    tags: ["網頁遊戲", "Next.js", "敘事解謎"],
-    
-    linkLabel: "進入無人夜市",
-  },
+{
+  type: "short",
+  videoUrl: "https://www.instagram.com/reel/DJwU-0vvuZz/?dlrf=djlnaW5oazgxOGNv",
+  category: "心理之夜",
+  title: "Out Psy in 心理之夜",
+  description: "「我們不是站在台前，但每一場精彩都由我們默默撐起。」",
+  tags: ["專案成果", "舞台劇"],
+},
   {
     type: "short",
     // 放入你的 Instagram Reels 網址
     videoUrl: "https://www.instagram.com/reel/DZ6TkuoJGXx/?utm_source=ig_web_copy_link",
-    category: "心理學分享",
-    title: "短影音作品三",
-    description: "在這裡介紹透過短影音分享的心理學知識。",
-    tags: ["心理學", "知識分享", "IG Reels"],
+    category: "More Dive",
+    title: "More Dive",
+    description: "一些小ig reels分享",
+    tags: ["水肺潛水", "IG Reels"],
   },
 
-  // 第三行：可改成圖片專案或繼續放 Shorts
-  {
-    type: "short",
-    videoUrl: "",
-    category: "作品展示",
-    title: "短影音作品四",
-    description: "在這裡加入你的作品介紹。",
-    tags: ["作品集", "創意企劃"],
-  },
-  {
-    type: "short",
-    videoUrl: "",
-    category: "幕後花絮",
-    title: "短影音作品五",
-    description: "在這裡分享專案製作的幕後故事。",
-    tags: ["製作過程", "團隊合作"],
-  },
-  {
-    type: "short",
-    videoUrl: "",
-    category: "成果發表",
-    title: "短影音作品六",
-    description: "在這裡展示你的專案成果與心得。",
-    tags: ["成果展示", "學習紀錄"],
-  },
+
 ];
 
 function isExternalHref(href: string) {

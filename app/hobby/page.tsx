@@ -10,7 +10,7 @@ const hobbies = [
   {
     title: "登山",
     description: "用雙腿走遍世界每一個大自然，用高度欣賞不一樣的世界。",
-    youtubeUrl: "https://youtube.com/shorts/nKAUOlY-dis?si=2VF6w3qfJA7dm-Js",
+    youtubeUrl: "https://youtube.com/shorts/MkSX5SkkFeo?si=CXmw3RL7rR3axLoG",
     instagramUrl: "",
     src: "/hobby/hiking.mp4",
     poster: "/hobby/hiking.jpg",

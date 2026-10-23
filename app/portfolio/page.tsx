@@ -2,33 +2,61 @@ import Image from "next/image";
 import Link from "next/link";
 
 const portfolioItems = [
+  // 第一行
   {
     src: "/project/outsidein.jpg",
-    alt: "看一下",
+    alt: "心理之夜舞台劇預覽",
     title: "心理之夜",
     description:
-      "結合心理學結合舞台劇的年度大型活動。在透過感性敘事引發觀眾對心靈議題的共鳴與反思。",
+      "結合心理學與舞台劇的年度大型活動。透過感性敘事引發觀眾對心靈議題的共鳴與反思。",
     href: "https://www.youtube.com/watch?v=w53gB4Unv0U",
     linkLabel: "觀看心理之夜",
   },
   {
-    src: "/project/spaceaccount.jpg",
-    alt: "太空號",
-    title: "太空號",
+    src: "/project/dct18.jpg", // 若有畢展專屬主視覺圖，可替換為對應圖片檔名（例如 /project/dct17th.jpg）
+    alt: "數位內容畢業展預覽",
+    title: "數位內容畢展",
     description:
-      "澳門初成立的網片群體，以簡單的故事帶出澳門目前的社會縮影。",
-   
-    href: "https://www.youtube.com/watch?v=8p31JneBhSg&t=5s",
-    linkLabel: "觀看太空號",
+      "國立政治大學數位內容學士學位學程畢業成果展，展出結合科技、互動裝置、跨領域敘事。(籌備中)",
+    href: "https://www.facebook.com/NCCUDCT17th",
+    linkLabel: "前往畢展粉專",
   },
   {
     src: "/project/birthday.jpg",
-    alt: "作品三預覽",
+    alt: "台灣心理學壽宴預覽",
     title: "台灣心理學壽宴",
-    description: "台灣心理學老師250壽宴。",
-
+    description: "台灣心理系莊仲仁、黃榮村與吳英璋教授聯合慶生壽宴安排與記錄。",
     href: "https://www.facebook.com/shyhnan.liou/posts/%E5%8F%B0%E5%A4%A7%E5%BF%83%E7%90%86%E7%B3%BB250%E5%A3%BD%E5%AE%B4%E5%8F%B0%E5%A4%A7%E5%BF%83%E7%90%86%E7%B3%BB%E8%8E%8A%E4%BB%B2%E4%BB%81%E6%95%99%E6%8E%8890%E9%BB%83%E6%A6%AE%E6%9D%91%E6%95%99%E6%8E%88%E8%88%87%E5%90%B3%E8%8B%B1%E7%92%8B%E6%95%99%E6%8E%88%E7%9A%8680%E5%90%88%E8%B5%B7%E4%BE%86250%E6%9D%BE%E5%A3%BD%E8%81%AF%E5%90%88%E6%85%B6%E7%94%9F%E6%95%B8%E7%99%BE%E5%B8%AB%E7%94%9F%E8%88%87%E5%AE%B6%E4%BA%BA%E6%AD%A1%E5%96%9C%E7%A5%9D%E8%B3%80-%E5%A4%A7%E5%AD%B8%E7%9A%84%E5%95%9F%E8%92%99%E4%B8%89%E4%BD%8D%E8%80%81%E5%B8%AB%E7%A2%BA%E5%AF%A6%E6%98%AF%E5%9C%A8%E6%88%91%E5%A4%A7%E5%AD%B8%E7%9A%84%E6%99%82%E5%80%99%E5%BE%88/27111953795056185/",
     linkLabel: "壽宴FB連結",
+  },
+
+  // 第二行
+  {
+    src: "/project/NightMartet.jpg",
+    alt: "無人夜市預覽",
+    title: "無人夜市",
+    description:
+      "以 1990 與 2005 雙時空為背景的心理恐怖敘事網頁遊戲，透過夜市經典攤位小遊戲解開記憶謎團。",
+    href: "https://1142-final-project-the-liminal-market.vercel.app/",
+    linkLabel: "進入遊戲",
+  },
+  {
+    src: "/project/unity.jpg", // 請將你的遊戲截圖放入 public/project/ 並替換檔名
+    alt: "迷幻世界 Unity 互動遊戲預覽",
+    title: "迷幻世界 ",
+    description:
+      "以 Unity 引擎開發的 3D 沉浸式互動遊戲。運用自訂 Shader、光影與視覺特效，打造扭曲空間感與超現實氛圍的探索。(持續製作中)",
+    href: "https://play.unity.com/en/games/fd907981-a1bf-46e4-8008-4a206081b0d2/no-drug-30", // 可填入 itch.io、GitHub Repo、YouTube 展示或 WebGL 遊玩連結
+    linkLabel: "前往體驗遊戲",
+  },
+  {
+    src: "/project/questiongame.jpg",
+    alt: "探險心理測驗預覽",
+    title: "探險心理測驗：未知的冒險指南",
+    description:
+      "以沉浸式探險為情境的趣味偽心理測驗。透過危機抉擇與未知探索機制，測出你在冒險旅途中的隱藏人格特質。",
+    href: "https://1142-web-112702008-hw2.vercel.app/",
+    linkLabel: "開始探險測驗",
   },
 ] as const;
 
@@ -47,7 +75,7 @@ function PortfolioCard({ item }: { item: Item }) {
 
   const inner = (
     <>
-      <div className="relative aspect-4/3 w-full overflow-hidden">
+      <div className="relative aspect-[4/3] w-full shrink-0 overflow-hidden bg-slate-100">
         <Image
           src={item.src}
           alt={item.alt}
@@ -56,7 +84,7 @@ function PortfolioCard({ item }: { item: Item }) {
           sizes="(max-width: 768px) 100vw, 33vw"
         />
         <div
-          className="pointer-events-none absolute inset-0 bg-linear-to-t from-slate-950/55 via-slate-950/10 to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-90"
+          className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/55 via-slate-950/10 to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-90"
           aria-hidden
         />
         <div
@@ -68,7 +96,7 @@ function PortfolioCard({ item }: { item: Item }) {
           </span>
         </div>
       </div>
-      <div className="relative flex flex-col gap-2 p-4 text-slate-800 transition-colors duration-300 group-hover:bg-white/80">
+      <div className="relative flex flex-1 flex-col gap-2 p-4 text-slate-800 transition-colors duration-300 group-hover:bg-white/80">
         <h2 className="text-lg font-semibold tracking-wide text-blue-950 transition-colors duration-300 group-hover:text-blue-900">
           {item.title}
         </h2>
@@ -76,7 +104,7 @@ function PortfolioCard({ item }: { item: Item }) {
           {item.description}
         </p>
         {href ? (
-          <span className="mt-1 inline-flex items-center gap-1 text-xs font-medium text-blue-800 underline-offset-2 group-hover:underline">
+          <span className="mt-auto inline-flex items-center gap-1 pt-2 text-xs font-medium text-blue-800 underline-offset-2 group-hover:underline">
             {linkLabel}
             <span aria-hidden>↗</span>
           </span>
@@ -129,6 +157,7 @@ export default function PortfolioPage() {
         </p>
       </header>
 
+      {/* 3 列排版網格，6 個卡片會自然排列成 2 行 */}
       <div className="grid w-full max-w-5xl grid-cols-1 gap-8 md:grid-cols-3">
         {portfolioItems.map((item) => (
           <PortfolioCard key={item.title} item={item} />
