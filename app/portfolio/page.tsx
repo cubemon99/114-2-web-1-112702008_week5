@@ -8,8 +8,8 @@ const portfolioItems = [
     title: "心理之夜",
     description:
       "結合心理學結合舞台劇的年度大型活動。在透過感性敘事引發觀眾對心靈議題的共鳴與反思。",
-      href:"https://www.youtube.com/watch?v=w53gB4Unv0U",
-      linkLable:"觀看心理之夜"
+    href: "https://www.youtube.com/watch?v=w53gB4Unv0U",
+    linkLabel: "觀看心理之夜",
   },
   {
     src: "/project/spaceaccount.jpg",
@@ -26,6 +26,9 @@ const portfolioItems = [
     alt: "作品三預覽",
     title: "台灣心理學壽宴",
     description: "台灣心理學老師250壽宴。",
+
+    href: "https://www.facebook.com/shyhnan.liou/posts/%E5%8F%B0%E5%A4%A7%E5%BF%83%E7%90%86%E7%B3%BB250%E5%A3%BD%E5%AE%B4%E5%8F%B0%E5%A4%A7%E5%BF%83%E7%90%86%E7%B3%BB%E8%8E%8A%E4%BB%B2%E4%BB%81%E6%95%99%E6%8E%8890%E9%BB%83%E6%A6%AE%E6%9D%91%E6%95%99%E6%8E%88%E8%88%87%E5%90%B3%E8%8B%B1%E7%92%8B%E6%95%99%E6%8E%88%E7%9A%8680%E5%90%88%E8%B5%B7%E4%BE%86250%E6%9D%BE%E5%A3%BD%E8%81%AF%E5%90%88%E6%85%B6%E7%94%9F%E6%95%B8%E7%99%BE%E5%B8%AB%E7%94%9F%E8%88%87%E5%AE%B6%E4%BA%BA%E6%AD%A1%E5%96%9C%E7%A5%9D%E8%B3%80-%E5%A4%A7%E5%AD%B8%E7%9A%84%E5%95%9F%E8%92%99%E4%B8%89%E4%BD%8D%E8%80%81%E5%B8%AB%E7%A2%BA%E5%AF%A6%E6%98%AF%E5%9C%A8%E6%88%91%E5%A4%A7%E5%AD%B8%E7%9A%84%E6%99%82%E5%80%99%E5%BE%88/27111953795056185/",
+    linkLabel: "壽宴FB連結",
   },
 ] as const;
 
@@ -60,7 +63,7 @@ function PortfolioCard({ item }: { item: Item }) {
           className="pointer-events-none absolute inset-0 flex items-center justify-center"
           aria-hidden
         >
-          <span className="translate-y-2 rounded-full bg-white/90 px-4 py-1.5 text-xs font-semibold tracking-wider text-blue-950 opacity-0 shadow-md transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+          <span className="rounded-full bg-white/90 px-4 py-1.5 text-xs font-semibold tracking-wider text-blue-950 shadow-md md:translate-y-2 md:opacity-0 md:transition-all md:duration-300 md:group-hover:translate-y-0 md:group-hover:opacity-100">
             {href ? linkLabel : "預覽"}
           </span>
         </div>
@@ -113,7 +116,7 @@ function PortfolioCard({ item }: { item: Item }) {
 
 export default function PortfolioPage() {
   return (
-    <div className="flex min-h-[70vh] w-full flex-col items-center gap-10 overflow-y-auto rounded-2xl bg-[url('/background_right.jpg')] bg-cover bg-center p-6">
+    <div className="flex min-h-[50vh] w-full flex-col items-center gap-6 overflow-y-auto rounded-2xl bg-[url('/background_right.jpg')] bg-cover bg-center p-4 sm:gap-10 sm:p-6 md:min-h-[70vh]">
       <header className="Tanugo-font mx-auto max-w-3xl text-center">
         <p className="mb-2 text-xs font-medium uppercase tracking-[0.2em] text-slate-600">
           Portfolio
